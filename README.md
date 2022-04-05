@@ -1,41 +1,72 @@
-# curso-series-temporais
-Material do curso "Análise de Séries Temporais e Alinhamento Não-Linear com Dynamic Time Warping (DTW)".
+# Análise de Séries Temporais e Alinhamento Não-Linear com Dynamic Time Warping (DTW)
 
-Este repositório contém apresentações (slides) e código (notebooks) do curso "Análise de Séries Temporais e Alinhamento Não-Linear com Dynamic Time Warping (DTW)", de parceria entre UFSCar e Petrobras.
-A ordem das aulas é a seguinte (com descrição do que cada notebook faz):
 
-Aula 1 Manhã - Intro e pré-processamento
-Filtros_classicos.ipynb: O objetivo desse notebook é demonstrar como utilizar alguns filtros em sinais, e o efeito que causa nos sinais.
+Este repositório contém apresentações (slides) e código (notebooks) do curso ministrado na Petrobras, em decorrência da parceria com a UFSCar. 
 
-Aula 1 Tarde - Forecasting
-Forecasting-decomposicao.ipynb : Notebook utilizado para gerar as figuras de séries temporais e suas componentes (tendência, sazonalidade, ruído)
+O curso tem como objetio instroduzir conceitos de mineração de dados em séries temporais utilizando técnicas clássicas de aprendizado de máquina como árvores de decisão e clustering. Na segunda metade do curso aborda-se técnicas específicas de séries temporais como alinhamento não-linear com Dynamic Time Warping (DTW). 
 
-Forecast.ipynb: O objetivo desse notebook é demonstrar alguns modelos existentes de forecasting, e como utilizá-los.
 
-Aula 2 Manhã - Classificação e regressão extrínseca
-ClassificaçãoDT.ipynb: O objetivo desse notebook é demonstrar a utilização do algoritmo de Arvore de decisões para a tarefa de classificação
+## Conteúdo do curso
+---
 
-Classificação-tsfel.ipynb: O objetivo é demonstrar a utilização do TSFEL para extração de features de Séries Temporais e a utilização de arvore de decisão para realizar a classificação.
 
-Classificação-sktime.ipynb: O objetivo desse notebook é demonstrar o uso de transformers para a tarefa de classificação.
+A seguir esta listado todas as aulas apresentadas ao longo do curso, juntamente com seus respectivos notebooks.
 
-Aula 2 Tarde - Similaridade
-BuscaED.ipynb: O objetivo é demonstrar como realizar uma busca por similaridade, utilizando distancia euclidiana, e também utilizar a busca por similaridade para forecast.
+- **Aula 1:** Introdução e pré-processamento
+    - Filtros Classicos.ipynb
+- **Aula 2:** Componentes de uma série temporal e Forecasting
+    - Decomposicao serie temporal.ipynb
+    - Forecast.ipynb
+- **Aula 3:** Medidas de distância, classificação e regressão extrínseca
+    - Busca Euclidiana.ipynb
+    - Classificação com sktime.ipynb
+    - Classificação com tsfel.ipynb
+    - Classificação com Arvore de Decisão.ipynb
+    - Clustering.ipynb
+- **Aula 4:** Tarefas de Mineração por Similaridade
+- **Aula 5:** Mais tarefas de mineração por similaridade e o Matrix Profile (MP)
+    - Matrix Profile com Stumpy.ipynb
+    - Segmentação.ipynb
+- **Aula 6:** Dynamic Time Warping
+    - DTW com DTAIDistance.ipynb
+    - DTW com dtwalign.ipynb
+    - UCR Suite.ipynb
+- **Aula 7:** DTW - Invariâncias
+- **Aula 08:** DTW - Busca
+    - UCR Suite.ipynb
+- **Aula 09:** DTW - Variações
+    - Variações DTW.ipynb
 
-Clustering.ipynb: O objetivo desse notebook como realizar o agrupamento hierárquico single linkage e complete linkage.
 
-Aula 3 Manhã - Mais tarefas e Matrix Profile
-Segmentação.ipynb: O objetivo é demonstrar o uso das funções Floss e Fluss para segmentação semantica de séries temporais
+## Instalação de depências
+---
 
-Aula 3 Tarde - DTW
-DTAIDistance.ipynb: Objetivo é  demonstrar o uso da biblioteca DTAIDistance para o alinhamento com DTW
-dtwalign.ipynb: Objetivo é demonstrar o uso da biblioteca dtwaligne para o alinhamento com DTW
+Os exemplos práticos apresentados no curso foram todos desenvolvido e executados no google colab. Caso deseje executá-los em sua maquina local utilizando o anaconda e o jupyter, a fim de evitar problemas de compatibilidade, siga os seguintes passo para configuração do ambiente:
 
-Aula 4 Manhã - UCR Suite
-UCR_Suite.ipynb: Objetivo é demonstrar como utilizar o UCR para busca por similaridade
+Com o anaconda já instalado crie um novo ambiente python dentro de uma pasta qualquer
+``` 
+$ conda create -n curso_dtw python=3.7.13
+$ conda activate curso_dtw
+```
 
-Aula 4 Tarde - Variações DTW
+Instale as bibliotecas que serão utilizadas durante o curso
+```
+$ conda install scipy statsmodels stumpy plotly jupyter
+$ conda install --c conda-forge dtaidistance sktime
+$ pip install dtwalign tsfel
+```
 
-Aula 5 Manhã - Apresentação de metodos de alinhamentos utilizados na geologia
+Por fim basta iniciar seu ambiente jupyter
+```
+$ jupyter notebook
+```
 
-Aula 5 Tarde - Desafio prático
+
+## Autores
+--- 
+
+[Dr. Diego Furtado Silva](https://github.com/diegofurts) - Apresentador
+
+[Luiz Antonio Rozedo](https://github.com/luizantonio26) - Assistente
+
+[Rafael da Costa Silva](https://github.com/RafaelSilva7) - Assistente
